@@ -9,7 +9,7 @@ export class UserService {
 
     constructor(@InjectModel('users') private readonly userModel: Model<User> ){}
 
-    public async finUser(id: string): Promise<User>{
+    public async finUserById(id: string): Promise<User>{
         return await this.userModel.findById(id)
     }
 
@@ -17,6 +17,10 @@ export class UserService {
 
         const newUser = new this.userModel(user);
         return await newUser.save();
+    }
+
+    public async findUserByUsername(username: string): Promise<User>{
+        return await this.userModel.findOne({username});
     }
 
 }

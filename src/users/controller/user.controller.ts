@@ -9,7 +9,7 @@ export class UserController {
 
     @Get(':id')
     public findUser(@Param('id')id: string){
-        return this.userService.finUser(id);
+        return this.userService.finUserById(id);
     }
 
     @Post()
