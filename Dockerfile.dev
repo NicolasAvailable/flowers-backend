@@ -1,0 +1,5 @@
+From node:8.24
+
+WORKDIR /app
+
+ENTRYPOINT npm run start:dev

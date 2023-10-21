@@ -1,3 +1,3 @@
 export const config = () => ({
-    DB_URL: process.env.DB_URL
+    MONGODB_CONNECT_URI: process.env.MONGODB_CONNECT_URI
 })

@@ -17,7 +17,7 @@ import { JwtStrategy } from './auth/jwt.strategy';
     MongooseModule.forRootAsync({
       inject: [ConfigService],
       useFactory: async (configSecret: ConfigService) => ({
-        uri: configSecret.get('DB_URL')
+        uri: configSecret.get('MONGODB_CONNECT_URI')
       })
     }),
     UsersModule,
