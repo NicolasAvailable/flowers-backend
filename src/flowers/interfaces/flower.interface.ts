@@ -2,11 +2,11 @@ import { Document } from "mongoose";
 
 export interface Flower extends Document{
     name: string;
-    gender: string;
+    gender: number;
     specie: string;
-    origin: string;
+    origin: number;
     country: string;
-    altitudinalFloor?: string;
+    altitudinalFloor?: number;
     images: Images[];
     createAt: Date;
 }

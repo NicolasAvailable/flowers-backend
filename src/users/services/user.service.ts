@@ -15,6 +15,10 @@ export class UserService {
         return await this.userModel.findById(id)
     }
 
+    public getAllUsers(){
+        return this.userModel.find({})
+    }
+
     public async createUser(user: CreateUserDto): Promise<User>{
 
         const {username, password} = user;
@@ -53,7 +57,7 @@ export class UserService {
         const successfulResponse = {
             message: 'User deleted successfully',
             statusCode: HttpStatus.NO_CONTENT,
-          };
+        };
         
         return successfulResponse
     }

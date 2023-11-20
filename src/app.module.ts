@@ -8,6 +8,7 @@ import { config } from './config';
 import { AuthModule } from './auth/auth.module';
 import { JwtStrategy } from './auth/jwt.strategy';
 import { FlowersModule } from './flowers/flowers.module';
+import { CloudinaryModule } from './cloudinary/cloudinary.module';
 
 @Module({
   imports: [
@@ -23,7 +24,8 @@ import { FlowersModule } from './flowers/flowers.module';
     }),
     UsersModule,
     AuthModule,
-    FlowersModule
+    FlowersModule,
+    CloudinaryModule
   ],
   controllers: [AppController],
   providers: [

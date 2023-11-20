@@ -10,6 +10,11 @@ export class UserController {
 
     constructor(private userService: UserService){}
 
+    @Get()
+    public getAllUsers(){
+        return this.userService.getAllUsers();
+    }
+
     @Get(':id')
     public findUser(@Param('id')id: string){
         return this.userService.finUserById(id);
