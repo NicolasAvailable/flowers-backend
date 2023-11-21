@@ -1,5 +1,4 @@
 import { Flower } from '../entities/flower.entity';
-import { Images } from '../interfaces/flower.interface';
 export class CreateFlowerDto extends Flower {
 
     name: string;
@@ -9,6 +8,6 @@ export class CreateFlowerDto extends Flower {
     country: string;
     altitudinalFloor: string;
     temperature: number;
-    images: Images[];
+    images: string[];
     createAt: Date;
 }

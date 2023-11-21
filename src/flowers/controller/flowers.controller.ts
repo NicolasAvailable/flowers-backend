@@ -11,7 +11,7 @@ export class FlowersController {
 
   @Post()
   create(@Body() createFlowerDto: CreateFlowerDto) {
-    return this.flowersService.create(createFlowerDto);
+    return this.flowersService.createFlower(createFlowerDto);
   }
 
   @Get()

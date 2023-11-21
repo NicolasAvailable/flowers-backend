@@ -7,10 +7,6 @@ export interface Flower extends Document{
     origin: number;
     country: string;
     altitudinalFloor?: number;
-    images: Images[];
+    images: string[];
     createAt: Date;
-}
-
-export interface Images{
-    img: string
 }

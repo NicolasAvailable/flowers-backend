@@ -3,6 +3,7 @@ import { FlowersService } from './services/flowers.service';
 import { FlowersController } from './controller/flowers.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FlowerSchema } from './schema/flower.schema';
+import { CloudinaryModule } from 'src/cloudinary/cloudinary.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { FlowerSchema } from './schema/flower.schema';
         name: 'flowers',
         schema: FlowerSchema
       }
-    ])
+    ]),
+    CloudinaryModule
   ],
   controllers: [FlowersController],
   providers: [FlowersService],
